@@ -9,6 +9,16 @@ public class Persona{
     private String mail;
     private String direccion;
 
+    public Persona(Long idPersona, String nombre, String apellido, String dni, String telefono, String mail, String direccion) {
+        IdPersona = idPersona;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.telefono = telefono;
+        this.mail = mail;
+        this.direccion = direccion;
+    }
+
     public Long getIdPersona() {
         return IdPersona;
     }
