@@ -1,6 +1,13 @@
 package com.example.demo.model;
+import org.hibernate.id.factory.spi.GenerationTypeStrategy;
 
+import javax.persistence.*;
+
+@Table(name = "persona")
+@Entity
 public class Persona{
+    @Id
+    @GeneratedValue (strategy=GenerationType.AUTO)
     private Long IdPersona;
     private String nombre;
     private String apellido;
