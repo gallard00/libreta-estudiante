@@ -1,31 +1,20 @@
 package com.example.demo.model;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+@Table(name = "estudiante")
+@Entity
+@Getter
+@Setter
 public class Estudiante {
+    @Id
+    @GeneratedValue (strategy=GenerationType.AUTO)
+    @Column(name = "id")
     private Long IdEstudiante;
     private Long IdPersona;
     private Integer legajo;
 
-    public Long getIdEstudiante() {
-        return IdEstudiante;
-    }
 
-    public void setIdEstudiante(Long idEstudiante) {
-        IdEstudiante = idEstudiante;
-    }
-
-    public Long getIdPersona() {
-        return IdPersona;
-    }
-
-    public void setIdPersona(Long idPersona) {
-        IdPersona = idPersona;
-    }
-
-    public Integer getLegajo() {
-        return legajo;
-    }
-
-    public void setLegajo(Integer legajo) {
-        this.legajo = legajo;
-    }
 }
